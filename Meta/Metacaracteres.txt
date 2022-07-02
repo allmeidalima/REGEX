@@ -1,0 +1,34 @@
+Metacaractere
+Descrição
+\	Marca o próximo caractere como um caractere especial ou como uma literal. Por exemplo, n corresponde ao caractere n, enquanto \n corresponde a um caractere de nova linha. A sequência \\ corresponde a \ e \( corresponde a (.
+^	Corresponde ao início da entrada.
+$	Corresponde ao final da entrada.
+*	Corresponde ao caractere precedente zero ou mais vezes. Por exemplo, zo* corresponde a z ou zoo.
++	Corresponde ao caractere precedente uma ou mais vezes. Por exemplo, zo+ corresponde a zoo, mas não a z.
+?	Corresponde ao caractere precedente zero ou uma vez. Por exemplo, a?ve? corresponde a ve em never.
+.	Corresponde a qualquer caractere único, exceto a um caractere de nova linha.
+(padrão)	Corresponde a um padrão e lembra a correspondência. A subsequência correspondida pode ser recuperada da coleção de correspondências resultantes, usando este código: Item [0]...[n]. Para corresponder caracteres de parênteses ( ), use \( ou \).
+x|y	Corresponde a x ou y. Por exemplo, z|wood corresponde a z ou wood. (z|w)oo corresponde a zoo ou wood.
+{n}	n é um número inteiro não negativo. Corresponde a exatamente n vezes. Por exemplo, o{2} não corresponde a o em Bob, mas corresponde aos primeiros dois os em foooood.
+{n,}	Nessa expressão, n é um número inteiro não negativo. Corresponde ao caractere anterior pelo menos n vezes. Por exemplo, o{2,} não corresponde a o em Bob e corresponde a todos os os em foooood. A expressão o{1,} é equivalente a o+ e o{0,} é equivalente a o*.
+{n,m}	As variáveis m e n são números inteiros não negativos. Corresponde ao caractere anterior no mínimo n e no máximo m vezes. Por exemplo, o{1,3} corresponde aos primeiros três os em fooooood. A expressão o{0,1} é equivalente a o?.
+[xyz]	Um conjunto de caracteres. Corresponde a qualquer um dos caracteres circundados. Por exemplo, [abc] corresponde a a em plain.
+[^xyz]	Um conjunto de caracteres negativo. Corresponde a qualquer caractere que não esteja delimitado. Por exemplo, [^abc] corresponde a p em plain.
+[a-z]	Um intervalo de caracteres. Corresponde a qualquer caractere do intervalo especificado. Por exemplo, [a-z] corresponde a qualquer caractere alfabético minúsculo no alfabeto inglês.
+[^m-z]	Um intervalo negativo de caracteres. Corresponde a qualquer caractere que não está no intervalo especificado. Por exemplo, [m-z] corresponde a qualquer caractere que não está no intervalo de m a z.
+\A	Corresponde somente ao início de uma sequência.
+\b	Corresponde a um limite de palavras, isto é, a posição entre uma palavra e um espaço. Por exemplo, er\b corresponde a er em never, mas não a er em verb.
+\B	Corresponde a um limite. A expressão ea*r\B corresponde a ear em never early.
+\d	Corresponde a um caractere de dígito.
+\D	Corresponde a um caractere diferente de dígito.
+\f	Corresponde a um caractere de alimentação de formulário.
+\n	Corresponde a um caractere de nova linha.
+\r	Corresponde a um caractere de retorno de linha.
+\s	Corresponde a qualquer espaço em branco, incluindo espaços, tabulações, caracteres de alimentação de formulário, e assim por diante.
+\S	Corresponde a qualquer caractere diferente de espaço em branco.
+\t	Corresponde a um caractere de tabulação.
+\v	Corresponde a um caractere de tabulação vertical.
+\w	Corresponde a qualquer caractere de texto, incluindo sublinhado. Essa expressão é equivalente a [A-Za-z0-9_].
+\W	Corresponde a qualquer caractere diferente de palavra. Essa expressão é equivalente a [^A-Za-z0-9_].
+\z	Corresponde somente ao fim de uma sequência.
+\Z	Corresponder somente ao fim de uma sequência ou antes de um caractere de nova lina no final.
