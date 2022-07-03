@@ -13,6 +13,7 @@ while True:
   print(f"{Colors.blue}{palavra} tem {len(palavra)} letras{Colors.reset}")
 
   """Conta quantas vezes uma vogal se repete dentro da palavra"""
+  
   conta = palavra.lower()
   resultado = {}
   for i in vogal:
@@ -22,7 +23,7 @@ while True:
   
   """
   Com base na nossa lista conseguimos conferir se as letras dentro 
-  da da palavra são vogais ou não, caso exista alguma letra com ascento ou números, usamos
+  da palavra são vogais ou não, caso exista alguma letra com ascento ou números, usamos
   a biblioteca 're' para identificar  esses caracteres.
   """
   for l in palavra.lower():
